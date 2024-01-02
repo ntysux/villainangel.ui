@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Quicksand } from 'next/font/google'
 import './globals.css'
+import { Quicksand } from 'next/font/google'
+import Theme from './_ui/theme'
+import { cookies } from 'next/headers'
 
-const quicksand = Quicksand({subsets: ['latin', 'vietnamese']})
+const quicksand = Quicksand({
+  subsets: ['latin', 'vietnamese']
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,10 +18,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const cookieThemeValue = cookies().get('theme')?.value
+  const darkMode = typeof cookieThemeValue === 'string' && cookieThemeValue === 'dark'
+
   return (
-    <html lang="en">
-      <body className={quicksand.className}>
+    <html lang="en" className={`${darkMode && 'dark'}`}>
+      <body className={`${quicksand.className} dark:bg-neutral-950/75`}>
         <div className='min-h-screen flex items-center justify-center'>
+          <Theme mode={Boolean(darkMode)} />
           {children}
         </div>
       </body>
