@@ -10,7 +10,7 @@ export default function Page() {
       checked={enabled}
       onChange={setEnabled}
       className={`
-        ${enabled ? 'bg-neutral-700' : 'bg-neutral-300'}
+        ${enabled ? 'bg-neutral-500 dark:bg-neutral-700' : 'bg-neutral-300/75 dark:bg-neutral-600'}
         outline-none flex py-0.5 px-2.5 rounded-full transition-colors duration-300
       `}
     >
