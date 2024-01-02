@@ -21,7 +21,7 @@ export default function Theme({
         checked={enabled}
         onChange={setEnabled}
         className={`
-          ${enabled ? 'bg-neutral-700' : 'bg-neutral-200'}
+          ${enabled ? 'bg-neutral-700' : 'bg-neutral-300/75'}
           outline-none flex py-0.5 px-2.5 rounded-full transition-colors duration-300
         `}
       >
