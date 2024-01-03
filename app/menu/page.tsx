@@ -35,7 +35,7 @@ export default function Page() {
             <Menu.Items 
               as='ul'
               className='
-                absolute z-10 overflow-hidden mt-3 py-4 flex flex-col rounded-xl w-screen max-w-xs bg-white shadow-lg shadow-neutral-200
+                absolute z-10 overflow-hidden mt-3 py-4 flex flex-col rounded-xl w-screen max-w-xs bg-white shadow-xl shadow-purple-200/75
                 dark:bg-neutral-700 dark:shadow-neutral-700
               '
             >

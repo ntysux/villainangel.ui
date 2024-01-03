@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${darkMode && 'dark'}`}>
-      <body className={`${quicksand.className} bg-neutral-100 dark:bg-neutral-950/75`}>
+      <body className={`${quicksand.className} bg-purple-100 dark:bg-neutral-950/75`}>
         <div className='min-h-screen flex items-center justify-center'>
           <Theme mode={Boolean(darkMode)} />
           {children}
