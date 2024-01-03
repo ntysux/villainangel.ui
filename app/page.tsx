@@ -5,6 +5,7 @@ export default function Page() {
     <div className="grid grid-cols-3 gap-3">
       <Link href='/button'>Button</Link>
       <Link href='/switch'>Switch</Link>
+      <Link href='/menu'>Menu</Link>
     </div>
   )
 }
